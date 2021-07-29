@@ -1,7 +1,7 @@
 # Vinted Clone - Frontend
 
 <div align="center"><p>This project is based on Vinted, an online marketplace for secondhand clothing.</p>
-<img src="https://github.com/BruceLIOU/vinted-front/blob/main/src/assets/images/vinted-logo.png?raw=true" alt="Vinted logo" width="170" />
+<img src="https://github.com/BruceLIOU/le-reacteur-react-clone-vinted/blob/main/src/assets/img/vinted-logo.png?raw=true" alt="Vinted logo" width="170" />
 <br />
 <br />
 <a href="https://le-reacteur-react-clone-vinted.netlify.app/" target="_blank" rel="noreferrer" >Frontend (Netlify)</a>
@@ -9,7 +9,7 @@
 <a href="https://github.com/BruceLIOU/clone-vinted-backend" target="_blank" rel="noreferrer" >Backend repository (Github)</a>
 <br />
 <br />
-<img src="./_preview/vinted-login-buy.gif" alt="Gif login and purchase" width="600" />
+<img src="./_preview/vinted-home.png" alt="Screenshot Vinted Homepage" width="600"/>
 </div>
 
 ## Stack & Features
@@ -84,7 +84,7 @@ _Please note that this project should be viewed on desktop only, it has very bas
 Clone this repository :
 
 ```
-git clone https://github.com/BruceLIOU/le-reacteur-react-clone-vinted
+git clone https://github.com/BruceLIOU/le-reacteur-react-clone-vinted.git
 ```
 
 Install dependencies with yarn:
