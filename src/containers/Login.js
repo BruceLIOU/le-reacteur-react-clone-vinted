@@ -15,6 +15,7 @@ const Login = ({ apiUrl, currentUser }) => {
         password: inputPassword,
       });
       // console.log("response: ", response);
+      console.log(apiUrl);
       currentUser(response.data.token);
       history.goBack(); // User redirected to previous page
     } catch (error) {
