@@ -47,7 +47,11 @@ function App() {
   const currentUser = (token) => {
     if (token) {
       // LogIn => create a cookie
-      Cookies.set("userToken", token, { expires: 365 }); // expires : 1 year
+      Cookies.set("userToken", token, {
+        expires: 365,
+        sameSite: "none",
+        secure: true,
+      }); // expires : 1 year
       setUserToken(token);
     } else {
       // LogOut => remove the cookie
