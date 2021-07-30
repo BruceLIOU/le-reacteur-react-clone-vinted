@@ -21,7 +21,7 @@ const SignUp = ({ apiUrl, currentUser }) => {
       currentUser(response.data.token);
       history.goBack(); // User redirected to previous page
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
