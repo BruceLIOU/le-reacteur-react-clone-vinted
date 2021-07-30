@@ -32,13 +32,13 @@ const PriceSwitch = ({ setSort }) => {
   return (
     <>
       <span>Trier&nbsp;par prix&nbsp;:</span>
-      <div>
+      <div className="switch-sort">
         {/* <FontAwesomeIcon icon="caret-up" /> */}
         <PriceSwitch
           checked={checked}
           onChange={toggleSort}
-          /*           icon={<span>⇡</span>}
-          checkedIcon={<span>⇣</span>} */
+          icon={<span className="switch-sort-asc">⇡</span>}
+          checkedIcon={<span className="switch-sort-desc">⇣</span>}
         ></PriceSwitch>
         {/* <FontAwesomeIcon icon="caret-down" /> */}
       </div>

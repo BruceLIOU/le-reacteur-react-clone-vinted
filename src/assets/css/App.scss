@@ -242,6 +242,31 @@ header {
             flex: 1;
             margin-right: 20px;
          }
+         .switch-sort-asc {
+            background-color: white;
+            border-radius: 10px;
+            width: 12px;
+            height: 12px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+        .switch-sort-desc {
+            background-color: white;
+            border-radius: 10px;
+            width: 12px;
+            height: 12px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            margin-top: 3px;
+            margin-right: -18px;
+      }
       }
    }
    > :nth-child(3),
