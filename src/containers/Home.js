@@ -49,7 +49,7 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
             ← Page précédente
           </span>
         )}
-        <div>
+        <div className="product-limit">
           Résultats par page :
           <span
             onClick={() => {
