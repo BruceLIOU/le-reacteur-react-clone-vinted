@@ -64,7 +64,7 @@ const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
           <Link
             className="blue-button"
             // User not logged in wre redirected to login page
-            to="/"
+            to={userToken ? "/offer/publish" : "/login"}
           >
             Vends tes articles
           </Link>

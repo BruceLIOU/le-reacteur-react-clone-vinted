@@ -10,7 +10,10 @@ const Hero = ({ userToken }) => {
       <div className="container">
         <div>
           <h1>Prêts à faire du tri dans vos placards ?</h1>
-          <Link to="/" className="blue-button-dark">
+          <Link
+            to={userToken ? "/offer/publish" : "/login"}
+            className="blue-button-dark"
+          >
             Commencer à vendre
           </Link>
         </div>

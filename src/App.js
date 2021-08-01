@@ -12,6 +12,7 @@ import Home from "./containers/Home";
 import Offer from "./containers/Offer";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
+import Publish from "./containers/Publish";
 
 // Then import components
 import Header from "./components/Header";
@@ -71,6 +72,9 @@ function App() {
         apiUrl={apiUrl}
       />
       <Switch>
+        <Route path="/offer/publish">
+          <Publish userToken={userToken} apiUrl={apiUrl} />
+        </Route>
         <Route path="/offer/:_id">
           <Offer userToken={userToken} apiUrl={apiUrl} />
         </Route>
