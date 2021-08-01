@@ -395,13 +395,43 @@ header {
 }
 .page-nav {
    display: flex;
-   justify-content: center;
    align-items: center;
+   border-radius: 3px;
+   border: 1px solid lightgrey;
+   height: 40px;
+   width: 100%;
+   justify-content: center;
+
+   > .numberPage {
+      justify-content: center;
+      flex: 1;
+      text-align: center;
+   }
 
    > * {
-      margin: 20px 30px;
+      /* margin: 20px 30px; */
       font-size: 14px;
       color: #21adb6;
+   }
+   .nav-left{
+      height: 40px;
+      width: 40px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      &:hover {
+         background-color:rgb(233, 233, 233);
+      }
+   }
+   .nav-right{
+      height: 40px;
+      width: 40px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      &:hover {
+         background-color:rgb(233, 233, 233);
+      }
    }
    > span {
       &:hover {
@@ -420,10 +450,18 @@ header {
          }
       }
    }
-   > .product-limit {
-      margin-top: 100px;
-  }
 }
+.product-limit {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   > span {
+      cursor: pointer;
+      margin: 6px;
+      color: #21adb6;
+   }
+  }
 
 //////// PUBLISH PAGE ////////
 .publish-section {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import OfferCard from "../components/OfferCard";
 import Loader from "../components/Loader";
@@ -40,50 +41,55 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
 
       <div className="page-nav">
         {page > 1 && (
-          <span
+          <div
+            className="nav-left"
             onClick={() => {
               setPage(page - 1);
               console.log(page);
             }}
           >
-            ← Page précédente
-          </span>
+            {/* ← Page précédente */}
+            <FontAwesomeIcon icon="caret-left" />
+          </div>
         )}
-        <div className="product-limit">
-          Résultats par page :
-          <span
-            onClick={() => {
-              setLimit(10);
-              console.log(page);
-            }}
-          >
-            [10]
-          </span>
-          <span
-            onClick={() => {
-              setLimit(25);
-              console.log(page);
-            }}
-          >
-            [25]
-          </span>
-          <span
-            onClick={() => {
-              setLimit(50);
-            }}
-          >
-            [50]
-          </span>
-        </div>
+        <div className="numberPage">{page}</div>
         {page * limit < data.count && (
-          <span
+          <div
+            className="nav-right"
             onClick={() => {
               setPage(page + 1);
             }}
           >
-            Page suivante →
-          </span>
+            {/* Page suivante → */}
+            <FontAwesomeIcon icon="caret-right" />
+          </div>
         )}
+      </div>
+      <div className="product-limit">
+        Résultats par page :
+        <span
+          onClick={() => {
+            setLimit(10);
+            console.log(page);
+          }}
+        >
+          [10]
+        </span>
+        <span
+          onClick={() => {
+            setLimit(25);
+            console.log(page);
+          }}
+        >
+          [25]
+        </span>
+        <span
+          onClick={() => {
+            setLimit(50);
+          }}
+        >
+          [50]
+        </span>
       </div>
     </div>
   );

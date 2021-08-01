@@ -21,16 +21,16 @@ import Footer from "./components/Footer";
 // import Fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faCaretUp,
-  faCaretDown,
+  faCaretLeft,
+  faCaretRight,
   faTimesCircle,
   faSearch,
   faPlusCircle,
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
-  faCaretUp,
-  faCaretDown,
+  faCaretLeft,
+  faCaretRight,
   faTimesCircle,
   faSearch,
   faPlusCircle,
@@ -42,7 +42,7 @@ function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null); // For authentification
   const [data, setData] = useState([]); // From API request
   const [page, setPage] = useState(1); // For page nav
-  const [limit, setLimit] = useState(25); // For page nav (limit default : 25)
+  const [limit, setLimit] = useState(10); // For page nav (limit default : 25)
 
   const currentUser = (token) => {
     if (token) {
