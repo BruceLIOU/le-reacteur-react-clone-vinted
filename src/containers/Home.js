@@ -12,7 +12,7 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${apiUrl}/offers?sort=price-asc&page=1&limit=25`
+          `${apiUrl}/offers?sort=price-asc&page=1&limit=10`
         );
         setData(response.data);
         setIsLoading(false);
