@@ -16,7 +16,7 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
-        alert("An error occured while fetching the data");
+        console.log(error.message);
       }
     };
     fetchData();

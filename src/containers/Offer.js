@@ -6,7 +6,7 @@ import OfferPicturesCarousel from "../components/OfferPicturesCarousel";
 import noAvatar from "../assets/img/no-avatar.png";
 import Loader from "../components/Loader";
 
-const Offer = ({ apiUrl, userToken, id }) => {
+const Offer = ({ apiUrl, userToken }) => {
   const { _id } = useParams();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ const Offer = ({ apiUrl, userToken, id }) => {
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
-        alert("An error occured while fetching the data");
+        console.log(error.message);
       }
     };
     fetchData();
