@@ -225,7 +225,7 @@ const Publish = ({ userToken, apiUrl }) => {
               Consommation.{" "}
             </span>
             <p>
-              <button class="white-btn">Sauvegarder le brouillon</button>
+              <button className="white-btn">Sauvegarder le brouillon</button>
               <button type="submit" className="blue-btn">
                 Ajouter
               </button>
