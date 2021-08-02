@@ -18,6 +18,7 @@ const Publish = ({ userToken, apiUrl }) => {
   const [offerColor, setOfferColor] = useState("");
   const [offerCity, setOfferCity] = useState("");
   const [offerPictures, setOfferPictures] = useState(0);
+  const [interestedExchange, setInterestedExchange] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,6 +33,7 @@ const Publish = ({ userToken, apiUrl }) => {
     formData.append("color", offerColor);
     formData.append("city", offerCity);
     formData.append("pictures", offerPictures);
+    /* formData.append("pictures", interestedExchange); */
 
     try {
       const response = await axios.post(`${apiUrl}/offer/publish`, formData, {
@@ -162,24 +164,58 @@ const Publish = ({ userToken, apiUrl }) => {
             <div>
               <div>
                 <label htmlFor="price">Prix de l'article</label>
-                <input
-                  type="number"
-                  required
-                  name="price"
-                  id="price"
-                  maxLength="100000"
-                  placeholder="0,00 €"
-                  value={offerPrice}
-                  onChange={(event) => setOfferPrice(event.target.value)}
-                />
-                {/*                 <div>
+                <div className="checkbox-section">
                   <input
-                    type="checkbox"
-                    name="interestedExchange"
-                    id="interestedExchange"
+                    type="number"
+                    required
+                    name="price"
+                    id="price"
+                    maxLength="100000"
+                    placeholder="0,00 €"
+                    value={offerPrice}
+                    onChange={(event) => setOfferPrice(event.target.value)}
                   />
-                  <span>Je suis intéressé(e) par les échanges</span>
-                </div> */}
+                  <div className="checkbox-input">
+                    <label
+                      for="interestedExchange"
+                      className={
+                        interestedExchange
+                          ? "checkbox-style-checked"
+                          : "checkbox-style"
+                      }
+                    >
+                      {interestedExchange && (
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="check"
+                          class="svg-inline--fa fa-check fa-w-16 fa-xs "
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512"
+                          color="white"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                          ></path>
+                        </svg>
+                      )}
+                    </label>
+
+                    <input
+                      type="checkbox"
+                      name="interestedExchange"
+                      id="interestedExchange"
+                      value={interestedExchange}
+                      onChange={(event) =>
+                        setInterestedExchange(event.target.checked)
+                      }
+                    />
+                    <span>Je suis intéressé(e) par les échanges</span>
+                  </div>
+                </div>
               </div>
             </div>
             <span>
