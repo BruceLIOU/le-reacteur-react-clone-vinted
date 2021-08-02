@@ -87,7 +87,7 @@ const Dropzone = ({ setOfferPictures }) => {
       <div {...getRootProps({ className: "dropzone" })}>
         <input {...getInputProps()} required name="dropzoneInput" />
         <div
-          className="white-button"
+          className="white-btn"
           style={{ width: "200px", margin: "30px auto", fontWeight: 700 }}
         >
           <FontAwesomeIcon icon="plus-circle" style={{ marginRight: "10px" }} />

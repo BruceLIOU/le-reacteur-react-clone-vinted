@@ -10,7 +10,7 @@
       margin: 0 auto;
   }
 
-  header div.white-button:nth-child(3), header div.white-button:nth-child(4), header > :nth-child(5) {
+  header div.white-btn:nth-child(3), header div.white-btn:nth-child(4), header > :nth-child(5) {
    visibility: hidden;
    }
  
@@ -45,7 +45,7 @@
  }
  
  @media (max-width: 940px) {
-   header div.white-button:nth-child(3), header div.white-button:nth-child(4), header > :nth-child(5) {
+   header div.white-btn:nth-child(3), header div.white-btn:nth-child(4), header > :nth-child(5) {
       visibility: hidden;
     }
    footer {
@@ -68,7 +68,7 @@
  }
  
  @media (max-width: 594px) {
-   header div.white-button:nth-child(3), header div.white-button:nth-child(4), header > :nth-child(5) {
+   header div.white-btn:nth-child(3), header div.white-btn:nth-child(4), header > :nth-child(5) {
       visibility: hidden;
     }
    footer {

@@ -28,7 +28,7 @@ const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
           {!userToken && location.pathname !== "/signup" && (
             // Not displayed to logged in users and on sign up page
             <div
-              className="white-button"
+              className="white-btn"
               onClick={() => {
                 setHideSignUpModal(false);
               }}
@@ -51,7 +51,7 @@ const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
             // Displayed when user isn't logged in and not on login page
             location.pathname !== "/login" && (
               <div
-                className="white-button"
+                className="white-btn"
                 onClick={() => {
                   setHideLoginModal(false);
                 }}

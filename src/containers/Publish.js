@@ -224,9 +224,12 @@ const Publish = ({ userToken, apiUrl }) => {
               <span className="link">Article L. 132-2</span> du Code de la
               Consommation.{" "}
             </span>
-            <button type="submit" className="blue-btn">
-              Ajouter
-            </button>
+            <p>
+              <button class="white-btn">Sauvegarder le brouillon</button>
+              <button type="submit" className="blue-btn">
+                Ajouter
+              </button>
+            </p>
           </form>
         </section>
       </div>
