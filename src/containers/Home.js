@@ -30,7 +30,7 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
       <div className="offer-list">
         {data.offers ? (
           data.offers.map((offer) => {
-            return <OfferCard offer={offer} key={offer._id} apiUrl={apiUrl} />;
+            return <OfferCard offer={offer} key={offer._id} />;
           })
         ) : (
           <div className="loading-message">
@@ -48,7 +48,6 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
               console.log(page);
             }}
           >
-            {/* ← Page précédente */}
             <FontAwesomeIcon icon="caret-left" />
           </div>
         )}
@@ -60,7 +59,6 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
               setPage(page + 1);
             }}
           >
-            {/* Page suivante → */}
             <FontAwesomeIcon icon="caret-right" />
           </div>
         )}

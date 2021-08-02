@@ -6,7 +6,7 @@ import OfferPicturesCarousel from "../components/OfferPicturesCarousel";
 import noAvatar from "../assets/img/no-avatar.png";
 import Loader from "../components/Loader";
 
-const Offer = ({ apiUrl, userToken }) => {
+const Offer = ({ apiUrl }) => {
   const { _id } = useParams();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -65,7 +65,7 @@ const Offer = ({ apiUrl, userToken }) => {
             />
             <div>{data.owner.account.username}</div>
           </div>
-          <button className="blue-button-dark">Acheter</button>
+          <button className="blue-btn">Acheter</button>
         </div>
       </div>
     </div>

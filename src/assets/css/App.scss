@@ -95,7 +95,7 @@ a {
       color: #21adb6;
    }
 }
-.blue-button-dark {
+.blue-btn {
    height: 35px;
    display: flex;
    justify-content: center;
@@ -290,12 +290,12 @@ header {
 //////// HERO BANNER HOMEPAGE ////////
 .hero-banner {
    position: relative;
-   .main-img {
+   .banner-img {
       height: 500px;
       width: 100%;
       object-fit: cover;
    }
-   .tear-img {
+   .teared-img {
       position: absolute;
       bottom: 0;
       right: 0%;
@@ -470,6 +470,21 @@ header {
       font-size: 30px;
       margin: 20px 0;
    }
+   .link {
+      cursor: pointer;
+      color: #21adb6;
+      font-weight: 400;
+   }
+   .dropzone {
+      border: 1px dashed grey;
+      margin: 20px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      height: 200px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+  }
    > form {
       display: flex;
       flex-direction: column;
@@ -482,6 +497,10 @@ header {
          box-shadow: 0 0 2px rgba(17, 17, 17, 0.2);
          background-color: #fff;
          margin: 10px 0;
+         > .tips-add-img{
+            margin: 20px;
+            color: #999;
+         }
          &:first-child {
             > div > section {
                display: flex;
@@ -506,6 +525,9 @@ header {
             justify-content: space-between;
             border-bottom: 1px solid #eee;
             padding: 20px;
+            > label {
+               font-weight: 400;
+            }
             > input,
             textarea {
                width: 50%;
@@ -674,7 +696,7 @@ header {
 }
 
 //////// LOGIN & SIGNUP PAGE ////////
-.login-signup-section {
+.login-section {
    display: flex;
    flex-direction: column;
    width: 300px;
@@ -683,6 +705,16 @@ header {
    padding: 30px;
    border-radius: 5px;
    z-index: 200;
+   .dropzone {
+      border: 1px dashed grey;
+      margin: 20px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+  }
    > div {
       // X to close modal
       position: relative;

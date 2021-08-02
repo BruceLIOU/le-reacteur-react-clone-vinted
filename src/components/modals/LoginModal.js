@@ -1,13 +1,17 @@
-import { useState } from "react";
+// import packages
 import axios from "axios";
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+// import FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LoginModal = ({
-  apiUrl,
   hideLoginModal,
   setHideLoginModal,
   currentUser,
+  apiUrl,
 }) => {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -22,7 +26,7 @@ const LoginModal = ({
       currentUser(response.data.token);
       setHideLoginModal(true);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
@@ -31,7 +35,7 @@ const LoginModal = ({
       className="modal-container"
       style={{ display: hideLoginModal ? "none" : "block" }}
     >
-      <section className="login-signup-section">
+      <section className="login-section">
         <div
           onClick={() => {
             setHideLoginModal(true);
@@ -60,7 +64,7 @@ const LoginModal = ({
             required
           />
           <button
-            className="blue-button-dark"
+            className="blue-btn"
             type="submit"
             onClick={() => setHideLoginModal(true)}
           >

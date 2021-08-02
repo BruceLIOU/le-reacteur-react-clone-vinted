@@ -1,31 +1,37 @@
-import { useState } from "react";
+// import packages
 import axios from "axios";
+
+import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-const Login = ({ apiUrl, currentUser }) => {
+const Login = ({ currentUser, apiUrl }) => {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const history = useHistory(); // To redirect upon submission
+
+  // Redirect after login
+  const history = useHistory();
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
     try {
+      event.preventDefault();
       const response = await axios.post(`${apiUrl}/user/login`, {
         email: inputEmail,
         password: inputPassword,
       });
-      // console.log("response: ", response);
-      console.log(apiUrl);
+      //console.log(apiUrl);
       currentUser(response.data.token);
-      history.goBack(); // User redirected to previous page
+      // Redirect previous page (n-1)
+      //history.goBack();
+      // Redirect to publish
+      history.push("/publish");
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
   return (
     <div className="container">
-      <section className="login-signup-section">
+      <section className="login-section">
         <h1>Se connecter</h1>
         <form onSubmit={handleSubmit}>
           <input
@@ -46,7 +52,7 @@ const Login = ({ apiUrl, currentUser }) => {
             }}
             required
           />
-          <button className="blue-button-dark" type="submit">
+          <button className="blue-btn" type="submit">
             Se connecter
           </button>
         </form>

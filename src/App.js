@@ -40,6 +40,7 @@ library.add(
 
 function App() {
   const apiUrl = "https://clone-vinted-backend.herokuapp.com"; // URL API
+  /* const apiUrl = "http://localhost:3001"; // URL API DEV */
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null); // For authentification
   const [data, setData] = useState([]); // From API request
   const [page, setPage] = useState(1); // For page nav
@@ -72,7 +73,7 @@ function App() {
         apiUrl={apiUrl}
       />
       <Switch>
-        <Route path="/offer/publish">
+        <Route path="/publish">
           <Publish userToken={userToken} apiUrl={apiUrl} />
         </Route>
         <Route path="/offer/:_id">

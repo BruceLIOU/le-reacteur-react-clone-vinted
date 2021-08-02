@@ -6,10 +6,9 @@ import LoginModal from "./modals/LoginModal";
 import SignUpModal from "./modals/SignUpModal";
 
 const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
-  const history = useHistory(); // Handle redirect upon click
+  const history = useHistory();
   const location = useLocation();
 
-  // State used to hide/display modals on click
   const [hideLoginModal, setHideLoginModal] = useState(true);
   const [hideSignUpModal, setHideSignUpModal] = useState(true);
 
@@ -62,9 +61,9 @@ const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
             )
           )}
           <Link
-            className="blue-button"
+            className="blue-btn"
             // User not logged in wre redirected to login page
-            to={userToken ? "/offer/publish" : "/login"}
+            to={userToken ? "/publish" : "/login"}
           >
             Vends tes articles
           </Link>

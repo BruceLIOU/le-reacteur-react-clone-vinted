@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import noAvatar from "../assets/img/no-avatar.png";
 
-const OfferCard = ({ apiUrl, offer }) => {
+const OfferCard = ({ offer }) => {
   return (
     <>
       <Link to={`/offer/${offer._id}`}>

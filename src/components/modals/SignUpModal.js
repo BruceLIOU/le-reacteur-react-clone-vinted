@@ -1,6 +1,10 @@
-import { useState } from "react";
+// import packages
 import axios from "axios";
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+// import FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SignUpModal = ({
@@ -35,7 +39,7 @@ const SignUpModal = ({
       className="modal-container"
       style={hideSignUpModal ? { display: "none" } : { display: "block" }}
     >
-      <section className="login-signup-section">
+      <section className="login-section">
         <div
           onClick={() => {
             setHideSignUpModal(true);
@@ -81,8 +85,8 @@ const SignUpModal = ({
             required
           />
           <div>
-            <input type="checkbox" name="tandc" id="tandc" />
-            <label htmlFor="tandc">S'inscrire à notre newsletter</label>
+            <input type="checkbox" name="newsletter" id="newsletter" />
+            <label htmlFor="newsletter">S'inscrire à notre newsletter</label>
             <p>
               En m'inscrivant je confirme avoir lu et accepté les Termes et
               Conditions et Politique de Confidentialité de Vinted. Je confirme
@@ -90,7 +94,7 @@ const SignUpModal = ({
             </p>
           </div>
           <button
-            className="blue-button-dark"
+            className="blue-btn"
             type="submit"
             onClick={() => setHideSignUpModal(true)}
           >

@@ -1,13 +1,17 @@
-import { useState } from "react";
+// import packages
 import axios from "axios";
+
+import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-const SignUp = ({ apiUrl, currentUser }) => {
+const SignUp = ({ currentUser, apiUrl }) => {
   const [inputUsername, setInputUsername] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputPhone, setInputPhone] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const history = useHistory(); // To redirect upon submission
+
+  // Redirect after login
+  const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,7 +23,8 @@ const SignUp = ({ apiUrl, currentUser }) => {
         password: inputPassword,
       });
       currentUser(response.data.token);
-      history.goBack(); // User redirected to previous page
+      // Redirect previous page (n-1)
+      history.push("/");
     } catch (error) {
       console.log(error.message);
     }
@@ -27,7 +32,7 @@ const SignUp = ({ apiUrl, currentUser }) => {
 
   return (
     <div className="container">
-      <section className="login-signup-section">
+      <section className="login-section">
         <h1>S'inscrire</h1>
         <form onSubmit={handleSubmit}>
           <input
@@ -66,15 +71,15 @@ const SignUp = ({ apiUrl, currentUser }) => {
             required
           />
           <div>
-            <input type="checkbox" name="tandc" id="tandc" />
-            <label htmlFor="tandc">S'inscrire à notre newsletter</label>
+            <input type="checkbox" name="newsletter" id="newsletter" />
+            <label htmlFor="newsletter">S'inscrire à notre newsletter</label>
             <p>
               En m'inscrivant je confirme avoir lu et accepté les Termes et
               Conditions et Politique de Confidentialité de Vinted. Je confirme
               avoir au moins 18 ans.
             </p>
           </div>
-          <button className="blue-button-dark" type="submit">
+          <button className="blue-btn" type="submit">
             S'inscrire
           </button>
         </form>
