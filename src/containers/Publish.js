@@ -177,7 +177,7 @@ const Publish = ({ userToken, apiUrl }) => {
                   />
                   <div className="checkbox-input">
                     <label
-                      for="interestedExchange"
+                      htmlFor="interestedExchange"
                       className={
                         interestedExchange
                           ? "checkbox-style-checked"
