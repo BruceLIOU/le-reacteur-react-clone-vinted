@@ -11,7 +11,7 @@ const Hero = ({ userToken }) => {
         src={tearHero}
         alt="Teared from paper effect"
       />
-      <div className="container">
+      <div>
         <div>
           <h1>Prêts à faire du tri dans vos placards ?</h1>
           <Link to={userToken ? "/publish" : "/login"} className="blue-btn">

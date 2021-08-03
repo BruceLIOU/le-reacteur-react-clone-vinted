@@ -25,6 +25,7 @@ const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
             page={page}
             apiUrl={apiUrl}
           />
+
           {!userToken && location.pathname !== "/signup" && (
             // Not displayed to logged in users and on sign up page
             <div

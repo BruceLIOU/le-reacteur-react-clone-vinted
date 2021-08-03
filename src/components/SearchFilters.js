@@ -35,7 +35,7 @@ const SearchFilters = ({ apiUrl, setData, limit, page }) => {
   return isLoading ? (
     <div className="container loading-message">En cours de chargement...</div>
   ) : (
-    <div>
+    <div className="container-search-bar">
       <div className="search-bar">
         <FontAwesomeIcon icon="search" />
         <input
