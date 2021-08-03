@@ -19,7 +19,8 @@ const CheckoutForm = ({
   const protectPrice = 0.4;
   const deleveryPrice = 0.8;
 
-  const total = (productPrice + protectPrice + deleveryPrice).toFixed(2);
+  const total =
+    productPrice + parseFloat(protectPrice) + parseFloat(deleveryPrice);
 
   const handleSubmit = async (event) => {
     try {
@@ -65,25 +66,25 @@ const CheckoutForm = ({
       <h1>Résumé de la commande</h1>
       <div>
         <div>Commande</div>
-        <div>{productPrice} €</div>
+        <div>{productPrice.toFixed(2)} €</div>
       </div>
       <div>
         <div>Frais protection acheteurs</div>
-        <div>{protectPrice} €</div>
+        <div>{protectPrice.toFixed(2)} €</div>
       </div>
       <div>
         <div>Frais de port</div>
-        <div>{deleveryPrice} €</div>
+        <div>{deleveryPrice.toFixed(2)} €</div>
       </div>
 
       <div>
         <div>Total</div>
-        <div>{total} €</div>
+        <div>{total.toFixed(2)} €</div>
       </div>
       <p>
         Il ne vous reste plus qu'un étape pour vous offrir
         <strong> {productTitle}</strong>. Vous allez payer
-        <strong> {total} € </strong>
+        <strong> {total.toFixed(2)} € </strong>
         (frais de protection et frais de port inclus).
       </p>
 
