@@ -292,13 +292,15 @@ header {
       align-items: flex-start;
       background-color: #fff;
       height: 220px;
-      width: 360px;
+      width: 400px;
       padding: 25px;
       border-radius: 3px;
       box-shadow: 0 0 2px rgba(17, 17, 17, 0.2);
       position: absolute;
       z-index: 20;
       top: calc((500px - 220px) / 2 - 30px);
+      margin-left: 295px;
+      box-sizing: border-box;
       :first-child {
         font-size: 34px;
         font-weight: 500;
