@@ -39,7 +39,7 @@ const Header = ({ apiUrl, currentUser, userToken, setData, limit, page }) => {
           {userToken ? (
             // Displayed when user is logged in
             <div
-              className="red-button"
+              className="red-btn"
               onClick={() => {
                 currentUser(null);
                 history.push("/");

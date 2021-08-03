@@ -43,7 +43,7 @@ const Dropzone = ({ setOfferPictures }) => {
           })
         )
       );
-      console.log("acceptedFiles", acceptedFiles);
+      //console.log("acceptedFiles", acceptedFiles);
       // Set-up for single file upload (index 0)
       setOfferPictures(acceptedFiles[0]);
     },

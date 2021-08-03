@@ -45,7 +45,6 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
             className="nav-left"
             onClick={() => {
               setPage(page - 1);
-              console.log(page);
             }}
           >
             <FontAwesomeIcon icon="caret-left" />
@@ -68,7 +67,7 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
         <span
           onClick={() => {
             setLimit(10);
-            console.log(page);
+            //console.log(page);
           }}
         >
           [10]
@@ -76,7 +75,7 @@ const Home = ({ apiUrl, data, setData, limit, setLimit, page, setPage }) => {
         <span
           onClick={() => {
             setLimit(25);
-            console.log(page);
+            //console.log(page);
           }}
         >
           [25]

@@ -13,6 +13,7 @@ import Offer from "./containers/Offer";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
 import Publish from "./containers/Publish";
+import Payment from "./containers/Payment";
 
 // Then import components
 import Header from "./components/Header";
@@ -44,7 +45,7 @@ function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null); // For authentification
   const [data, setData] = useState([]); // From API request
   const [page, setPage] = useState(1); // For page nav
-  const [limit, setLimit] = useState(10); // For page nav (limit default : 25)
+  const [limit, setLimit] = useState(10); // For page nav (limit default : 10)
 
   const currentUser = (token) => {
     if (token) {
@@ -78,6 +79,9 @@ function App() {
         </Route>
         <Route path="/offer/:_id">
           <Offer userToken={userToken} apiUrl={apiUrl} />
+        </Route>
+        <Route path="/payment">
+          <Payment />
         </Route>
         <Route path="/signup">
           <SignUp currentUser={currentUser} apiUrl={apiUrl} />

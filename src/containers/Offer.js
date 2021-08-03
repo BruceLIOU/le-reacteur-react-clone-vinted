@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -6,10 +6,12 @@ import OfferPicturesCarousel from "../components/OfferPicturesCarousel";
 import noAvatar from "../assets/img/no-avatar.png";
 import Loader from "../components/Loader";
 
-const Offer = ({ apiUrl }) => {
+const Offer = ({ userToken, apiUrl }) => {
   const { _id } = useParams();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,7 +67,27 @@ const Offer = ({ apiUrl }) => {
             />
             <div>{data.owner.account.username}</div>
           </div>
-          <button className="blue-btn">Acheter</button>
+          {/* <Link className="blue-btn" to="/payment"> */}
+          <button
+            className="blue-btn"
+            onClick={() => {
+              if (userToken) {
+                history.push("/payment", {
+                  userId: data.owner._id,
+                  productTitle: data.product_name,
+                  productPrice: data.product_price,
+                  userToken: userToken,
+                });
+              } else {
+                history.push("/login");
+              }
+            }}
+          >
+            Acheter
+          </button>
+          {/* Acheter */}
+          {/* </Link> */}
+          {/* <button className="blue-btn">Acheter</button> */}
         </div>
       </div>
     </div>
